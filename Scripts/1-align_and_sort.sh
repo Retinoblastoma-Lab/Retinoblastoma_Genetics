@@ -10,9 +10,9 @@ module load bwa/0.7.18
 module load samtools/1.17
 
 # Define paths
-REF="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
-OUTPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/alignment"
-INPUT_DIR="/home/emurungi/gitau/Doctorat/RB1_variant_calling/RB_data/trimmed_fastq_data"
+REF="../RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
+OUTPUT_DIR="../../variant_calling/entire_genome/alignment"
+INPUT_DIR="../../RB1_variant_calling/RB_data/trimmed_fastq_data"
 
 # Create output directory if it doesn't exist
 mkdir -p "$OUTPUT_DIR"
@@ -35,7 +35,7 @@ for R1 in "$INPUT_DIR"/*_trimmed_R1.fastq.gz; do
     OUT_BAM="$OUTPUT_DIR/${SAMPLE}.sorted.bam"
 
     # Define read group
-    RG="@RG\tID:${SAMPLE}\tLB:${SAMPLE}\tPL:ILLUMINA\tPM:HISEQ\tSM:${SAMPLE}"
+    RG="@RG\tID:${SAMPLE}\tLB:${SAMPLE}\tPL:ILLUMINA\tPM:Miseq\tSM:${SAMPLE}"
 
     echo "Aligning and sorting $SAMPLE..."
 
