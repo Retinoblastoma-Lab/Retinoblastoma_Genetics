@@ -9,8 +9,8 @@
 PICARD_JAR="/export/apps/picard/2.8.2/picard.jar"
 
 # Define directories
-INPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/alignment"
-OUTPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/marked_duplicates"
+INPUT_DIR="../../variant_calling/entire_genome/alignment"
+OUTPUT_DIR="../../variant_calling/entire_genome/marked_duplicates"
 
 # Create output directory if it does not exist
 mkdir -p "$OUTPUT_DIR"
