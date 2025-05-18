@@ -9,9 +9,9 @@
 module load gatk/4.4.0.0
 
 # Define paths
-INPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/variants_filtering"
-OUTPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/variants_to_table"
-REFERENCE="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
+INPUT_DIR="../../variant_calling/entire_genome/variants_filtering"
+OUTPUT_DIR="../../variant_calling/entire_genome/variants_to_table"
+REFERENCE="../RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
 INPUT_VCF="${INPUT_DIR}/kenya_retino_filtered_passed_snps.vcf"
 OUTPUT_TSV="${OUTPUT_DIR}/kenya_retino_filtered_passed_snps.tsv"
 
