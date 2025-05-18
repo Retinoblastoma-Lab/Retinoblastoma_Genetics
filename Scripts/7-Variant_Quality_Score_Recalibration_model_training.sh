@@ -28,4 +28,4 @@ gatk VariantRecalibrator \
     --resource:dbsnp,known=true,training=false,truth=false,prior=7 ${REFERENCE_DIR}/Homo_sapiens_assembly38.dbsnp138.vcf \
     -an QD -an MQRankSum -an ReadPosRankSum -an FS -an MQ -an SOR -an DP \
     -O "${OUTPUT_DIR}/kenyan_retino_snps.recal" \
-    --tranches-file "${OUTPUT_DIR}/kenyan_retino_snps.tranches" 
+    --tranches-file "${OUTPUT_DIR}/kenyan_retino_snps.tranches"  
