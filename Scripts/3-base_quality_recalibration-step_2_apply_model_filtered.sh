@@ -35,6 +35,6 @@ for bam_file in "$INPUT_DIR"/*.sorted_dedup.bam; do
         -O "$OUTPUT_DIR/${sample_base}.bqsr.bam"
 done
 
-echo "All samples processed!"
+echo "All samples processed!" 
 
 
