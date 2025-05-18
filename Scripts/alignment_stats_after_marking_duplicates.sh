@@ -31,4 +31,4 @@ for bam_file in "$INPUT_DIR"/*.bam; do
     echo "===== $base_name =====" >> "$MERGED_REPORT"
     cat "$out_file" >> "$MERGED_REPORT"
     echo -e "\n" >> "$MERGED_REPORT"
-done
+done 
