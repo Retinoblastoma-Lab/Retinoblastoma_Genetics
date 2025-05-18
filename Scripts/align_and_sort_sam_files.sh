@@ -50,5 +50,5 @@ for R1 in "$INPUT_DIR"/*_trimmed_R1.fastq.gz; do
     rm "$OUT_SAM"
 
     echo "Finished processing $SAMPLE."
-done
+done 
 
