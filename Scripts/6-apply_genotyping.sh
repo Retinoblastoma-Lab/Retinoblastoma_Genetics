@@ -24,5 +24,5 @@ gatk GenotypeGVCFs \
     -V "$INPUT_GVCF" \
     -L "$rb1_bed_file" \
     -O "$OUTPUT_VCF"
-
+ 
 
