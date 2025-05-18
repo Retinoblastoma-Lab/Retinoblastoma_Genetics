@@ -26,4 +26,4 @@ for BAM in "$INPUT_DIR"/*.bam; do
         CREATE_INDEX=true \
         VALIDATION_STRINGENCY=SILENT
 done
-
+ 
