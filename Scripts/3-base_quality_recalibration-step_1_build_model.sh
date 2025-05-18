@@ -26,7 +26,7 @@ for BAM in "$INPUT_DIR"/*.bam; do
         -R "$REFERENCE" \
         --known-sites "$KNOWN_SITES" \
         -O "$OUTPUT_DIR/${BASENAME}_recal_data.table"
-done
+done 
 
 
 
