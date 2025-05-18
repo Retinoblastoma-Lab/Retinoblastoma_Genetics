@@ -28,5 +28,5 @@ gatk CombineGVCFs \
     -R "$REFERENCE" \
     $V_FILES \
     -L  "$rb1_bed_file"\
-    -O "$OUTPUT_DIR"/kenya_retinoblastoma_variants_Rb1_only.g.vcf.gz
+    -O "$OUTPUT_DIR"/kenya_retinoblastoma_variants_Rb1_only.g.vcf.gz 
 
