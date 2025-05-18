@@ -48,4 +48,4 @@ for R1 in "$INPUT_DIR"/*_trimmed_R1.fastq.gz; do
     samtools index "$OUT_BAM"
 
     echo "Finished processing $SAMPLE."
-done
+done 
