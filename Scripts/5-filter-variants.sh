@@ -29,4 +29,4 @@ gatk VariantRecalibrator \
  #   --tranches-file ..output/variant_calling/filtered/C075_S70_L001_snps.tranches \
  #   --recal-file ..output/variant_calling/filtered/C075_S70_L001_snps.recal \
  #   -mode SNP
-
+ 
