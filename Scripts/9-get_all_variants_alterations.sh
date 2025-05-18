@@ -37,4 +37,4 @@ gatk VariantRecalibrator \
   --resource:dbsnp,known=true,training=false,truth=false,prior=2 ${REFERENCE_DIR}/annotation/Homo_sapiens_assembly38.dbsnp138.vcf.gz \
   -an QD -an FS -an SOR -an DP \
   -O "${OUTPUT_DIR}/kenyan_retino_indels.recal" \
-  --tranches-file "${OUTPUT_DIR}/kenyan_retino_indels.tranches"
+  --tranches-file "${OUTPUT_DIR}/kenyan_retino_indels.tranches" 
