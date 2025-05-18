@@ -9,31 +9,12 @@
 # Load required GATK module
 module load gatk/4.4.0.0
 
-# Define directories
-#INPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/marked_duplicates"
-#OUTPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/base_quality_recalibration_step_2"
-#REFERENCE="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
-#KNOWN_SITES="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/reference/Homo_sapiens_assembly38.dbsnp138.vcf"
-#bqsr-recal-file="/var/scratch/global/emurungi/variant_calling/entire_genome/base_quality_recalibration"
-
-
-# Create output directory if it doesn't exist
-#mkdir -p "$OUTPUT_DIR"
-
-# step 2: Apply the model to adjust the base quality scores
-#gatk ApplyBQSR \
-#    -I ../output/C075_S70_L001.sort.dup.bam \
-#    -R ../reference/hg38/Homo_sapiens_assembly38.fasta \
-##    --bqsr-recal-file ../output/recal_data.table \
-#    -O ../output/C075_S70_L001.sort.dup.bqsr.bam
-
-
 
 # Define directories
-INPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/marked_duplicates"
-OUTPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/base_quality_recalibration_step_2"
-REFERENCE="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
-BQSR_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/base_quality_recalibration"
+INPUT_DIR="../../variant_calling/entire_genome/marked_duplicates"
+OUTPUT_DIR="../../variant_calling/entire_genome/base_quality_recalibration_step_2"
+REFERENCE="../RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
+BQSR_DIR="../variant_calling/entire_genome/base_quality_recalibration"
 
 # Create output directory if it doesn't exist
 mkdir -p "$OUTPUT_DIR"
