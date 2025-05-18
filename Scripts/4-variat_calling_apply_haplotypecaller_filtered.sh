@@ -9,10 +9,10 @@
 module load gatk/4.4.0.0
 
 # Define directories
-INPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/base_quality_recalibration_step_2"
-REFERENCE="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
-OUTPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/Rb1_region_only_variants"
-rb1_bed_file="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/annotation/RB1_exons_filtered.bed"
+INPUT_DIR="../../variant_calling/entire_genome/base_quality_recalibration_step_2"
+REFERENCE="../RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
+OUTPUT_DIR="../../variant_calling/entire_genome/Rb1_region_only_variants"
+rb1_bed_file="../RB1_variant_calling/entire_genome/annotation/RB1_exons_filtered.bed"
 # Create output directory if it doesn't exist
 mkdir -p "$OUTPUT_DIR"
 
