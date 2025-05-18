@@ -39,5 +39,5 @@ gatk VariantFiltration \
   --filter-name "MQRankSum_lt_-10" --filter-expression "MQRankSum < -10.0" \
   --filter-name "ReadPosRankSum_lt_-8.0" --filter-expression "ReadPosRankSum < -8.0" \
   --genotype-filter-name "LowGQ" --genotype-filter-expression "GQ < 20" \
-  --genotype-filter-name "LowDP" --genotype-filter-expression "DP < 10"
+  --genotype-filter-name "LowDP" --genotype-filter-expression "DP < 10" 
 
