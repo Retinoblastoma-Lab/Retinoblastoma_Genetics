@@ -9,10 +9,10 @@
 module load gatk/4.4.0.0
 
 # Define paths
-REFERENCE="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
-INPUT_GVCF="/var/scratch/global/emurungi/variant_calling/entire_genome/combined_gvcfs_Rb1_only/kenya_retinoblastoma_variants_Rb1_only.g.vcf.gz"
-OUTPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/applying_genotyping_rb1_gene"
-rb1_bed_file="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/annotation/RB1_exons_filtered.bed"
+REFERENCE="../../RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
+INPUT_GVCF="../../variant_calling/entire_genome/combined_gvcfs_Rb1_only/kenya_retinoblastoma_variants_Rb1_only.g.vcf.gz"
+OUTPUT_DIR="../../variant_calling/entire_genome/applying_genotyping_rb1_gene"
+rb1_bed_file="../../RB1_variant_calling/entire_genome/annotation/RB1_exons_filtered.bed"
 OUTPUT_VCF="${OUTPUT_DIR}/kenya_retino_rb1_output.vcf.gz"
 
 # Create output directory if it doesn't exist
