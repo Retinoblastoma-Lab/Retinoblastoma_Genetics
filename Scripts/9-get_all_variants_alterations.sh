@@ -9,9 +9,9 @@
 module load gatk/4.4.0.0
 
 # Define paths
-INPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/applying_genotyping"
-OUTPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/model_building"
-REFERENCE_DIR="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/reference"
+INPUT_DIR="../../variant_calling/entire_genome/applying_genotyping"
+OUTPUT_DIR="../variant_calling/entire_genome/model_building"
+REFERENCE_DIR="../../RB1_variant_calling/entire_genome/reference"
 
 # Create output directory if it doesn't exist
 mkdir -p "$OUTPUT_DIR"
