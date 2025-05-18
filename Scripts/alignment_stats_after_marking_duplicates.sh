@@ -9,8 +9,8 @@
 module load samtools/1.9 
 
 # Define directories
-INPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/marked_duplicates"
-OUTPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/marked_dup_alignment_stats"
+INPUT_DIR="../../variant_calling/entire_genome/marked_duplicates"
+OUTPUT_DIR="../../variant_calling/entire_genome/marked_dup_alignment_stats"
 MERGED_REPORT="${OUTPUT_DIR}/alignment_statistics.txt"
 
 # Create output directory if it does not exist
