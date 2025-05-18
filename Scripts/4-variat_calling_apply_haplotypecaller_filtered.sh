@@ -34,4 +34,4 @@ for bam_file in "$INPUT_DIR"/*.bqsr.bam; do
         -O "$OUTPUT_DIR/${bam_base}.g.vcf.gz"
 done
 
-echo "All samples processed with HaplotypeCaller!"
+echo "All samples processed with HaplotypeCaller!" 
