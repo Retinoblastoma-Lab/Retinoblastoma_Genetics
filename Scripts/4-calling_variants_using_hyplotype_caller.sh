@@ -12,7 +12,7 @@ gatk HaplotypeCaller \
     -R ../reference/hg38/Homo_sapiens_assembly38.fasta \
     -ERC GVCF \
     -L chr13 \
-    -O ../output/variant_calling/C075_S70_L001.g.vcf.gz
+    -O ../output/variant_calling/C075_S70_L001.g.vcf.gz 
 
 
 
