@@ -49,5 +49,5 @@ done
 echo "Picard CollectMultipleMetrics done!"
 
 
-echo "QC metrics for all samples collected."
+echo "QC metrics for all samples collected." 
 
