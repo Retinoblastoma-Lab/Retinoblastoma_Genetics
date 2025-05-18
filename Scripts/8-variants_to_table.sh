@@ -24,4 +24,4 @@ gatk VariantsToTable \
     -V "$INPUT_VCF" \
     -F CHROM -F POS -F FILTER -F TYPE -GF AD -GF DP \
     --show-filtered \
-    -O "$OUTPUT_TSV"
+    -O "$OUTPUT_TSV" 
