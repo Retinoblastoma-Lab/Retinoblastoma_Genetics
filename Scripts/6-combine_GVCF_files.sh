@@ -9,10 +9,10 @@
 module load gatk/4.4.0.0
 
 # Define paths
-REFERENCE="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
-INPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/Rb1_region_only_variants"
-OUTPUT_DIR="/var/scratch/global/emurungi/variant_calling/entire_genome/combined_gvcfs_Rb1_only"
-rb1_bed_file="/home/emurungi/gitau/Doctorat/RB1_variant_calling/entire_genome/annotation/RB1_exons_filtered.bed"
+REFERENCE="../../RB1_variant_calling/entire_genome/reference/hg38/Homo_sapiens_assembly38.fasta"
+INPUT_DIR="../variant_calling/entire_genome/Rb1_region_only_variants"
+OUTPUT_DIR="../variant_calling/entire_genome/combined_gvcfs_Rb1_only"
+rb1_bed_file="../RB1_variant_calling/entire_genome/annotation/RB1_exons_filtered.bed"
 
 # Create output directory if it doesn't exist
 mkdir -p "$OUTPUT_DIR"
