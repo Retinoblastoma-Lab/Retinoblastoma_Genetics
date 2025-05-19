@@ -16,12 +16,18 @@ This Repository has two parts:
 ### Part 2: Copy Number Variation Analysis  
 This a step-by-step guide for using [CNVkit](https://cnvkit.readthedocs.io/en/stable/pipeline.html) to identify copy number variations (CNVs) in the Kenyan Retinoblastoma targeted RB1 gene sequencing, including the necessary code at each step. CNVkit is optimized for targeted sequencing panels, exomes, and WGS  
 
-#### Step 0: Setup
+#### Step 0: Setup and Installation
 Install CNVkit  
-**Note**: Make sure you have a working Python environment (Python ≥ 3.6). Then install CNVkit: 
+**Note**: Make sure you have a working Python environment (Python ≥ 3.6). Then install CNVkit:   
+
+```
+conda create -n cnvkit-env cnvkit -c bioconda -c conda-forge
+conda activate cnvkit-env
+
+```
 
 
-####  Step 2: Prepare Inputs
+####  Step 1: Prepare Inputs
 You'll need:
 
 * Tumor BAM file (aligned, sorted, and indexed)
