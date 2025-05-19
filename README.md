@@ -32,3 +32,4 @@ You'll need:
 * Tumor BAM file (aligned, sorted, and indexed)
 * Target BED file (from your panel, includes RB1 coordinates)
 * Reference genome FASTA (same used for alignment)
+
