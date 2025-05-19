@@ -8,3 +8,10 @@ This Repository has two parts:
     a. Analysis Steps to identify inDELS (Insertions and Deletions), and Single Nucleotide Polymorphism.  
     b. Analysis Steps to identify Copy Number Variations (CNVs)  
 
+
+## Part 1: SNPS and Indels Analysis
+
+
+
+## Part 2: Copy Number Variation Analysis
+
