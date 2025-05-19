@@ -41,3 +41,12 @@ cnvkit.py reference \
     -f reference.fasta \
     -o flat_reference.cnn
 ```
+
+#### Step 3: Run CNVkit on tumor sample
+
+```
+cnvkit.py reference \
+    -t targets.bed \
+    -f reference.fasta \
+    -o flat_reference.cnn
+```
