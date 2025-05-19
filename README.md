@@ -9,9 +9,9 @@ This Repository has two parts:
     b. Analysis Steps to identify Copy Number Variations (CNVs)  
 
 
-## Part 1: SNPS and Indels Analysis
+### Part 1: SNPS and Indels Analysis
 
 
 
-## Part 2: Copy Number Variation Analysis
+### Part 2: Copy Number Variation Analysis
 
