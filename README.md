@@ -45,8 +45,31 @@ cnvkit.py reference \
 #### Step 3: Run CNVkit on tumor sample
 
 ```
-cnvkit.py reference \
-    -t targets.bed \
-    -f reference.fasta \
-    -o flat_reference.cnn
+#!/bin/bash
+
+# Define file paths
+TARGETS="/home/jgitau/annotations/RB1_exons_filtered.bed"
+REFERENCE_FASTA="/home/jgitau/annotations/Homo_sapiens_assembly38.fasta"
+REFERENCE_CNN="/home/jgitau/flat_reference_files/flat_reference.cnn"
+OUTPUT_DIR="cnvkit_output"
+BAM_DIR="/home/jgitau/data"
+
+# Make output directory
+mkdir -p "$OUTPUT_DIR"
+
+# Loop through each BAM file and process with CNVkit batch
+for bam in "$BAM_DIR"/*.bam; do
+    sample=$(basename "$bam" .bam)
+    echo "Processing $sample"
+
+    cnvkit.py batch "$bam" \
+        -r "$REFERENCE_CNN" \
+        -t "$TARGETS" \
+        -f "$REFERENCE_FASTA" \
+        -d "$OUTPUT_DIR/$sample"
+
+    echo "$sample done."
+done
+
+echo "All BAM files processed."
 ```
