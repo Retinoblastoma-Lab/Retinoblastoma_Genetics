@@ -18,5 +18,5 @@ This a step-by-step guide for using [CNVkit](https://cnvkit.readthedocs.io/en/st
 
 #### Step 0: Setup
 Install CNVkit  
-**Note**: Make sure you have a working Python environment (Python ≥ 3.6). Then install CNVkit:
+**Note**: Make sure you have a working Python environment (Python ≥ 3.6). Then install CNVkit: 
 
