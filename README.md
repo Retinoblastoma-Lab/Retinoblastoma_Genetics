@@ -20,3 +20,10 @@ This a step-by-step guide for using [CNVkit](https://cnvkit.readthedocs.io/en/st
 Install CNVkit  
 **Note**: Make sure you have a working Python environment (Python ≥ 3.6). Then install CNVkit: 
 
+
+####  Step 2: Prepare Inputs
+You'll need:
+
+* Tumor BAM file (aligned, sorted, and indexed)
+* Target BED file (from your panel, includes RB1 coordinates)
+* Reference genome FASTA (same used for alignment)
