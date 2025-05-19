@@ -1,0 +1,9 @@
+# Apply hard filters
+gatk VariantFiltration \  # Used GATK variant filtering function
+  -R "$REFERENCE" \ # Link to the human reference genome
+  -V "$INPUT_VCF" \ # Pre-filtered variants
+  --filter-expression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || SOR > 3.0" \  ## Variant metrices employed
+  --filter-name "GermlineFilter" \ # Specified it's germline
+ 
+
+PS: Check the variannt_filtering_hardfiltering.sh script for a comprehensive overview of files used
