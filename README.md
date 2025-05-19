@@ -33,3 +33,11 @@ You'll need:
 * Target BED file (from your panel, includes RB1 coordinates)
 * Reference genome FASTA (same used for alignment)
 
+#### Step 2: Create a flat reference
+
+```
+cnvkit.py reference \
+    -t targets.bed \
+    -f reference.fasta \
+    -o flat_reference.cnn
+```
