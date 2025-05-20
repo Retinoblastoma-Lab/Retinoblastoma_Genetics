@@ -11,9 +11,12 @@ This Repository has two parts:
 
 ### Part 1: SNPS and Indels Analysis
 
-
+// ------ Work in Progress to update the page //
 
 ### Part 2: Copy Number Variation Analysis  
+
+For the Analysis scripts, kindly refer to the scripts directory   
+
 This a step-by-step guide for using [CNVkit](https://cnvkit.readthedocs.io/en/stable/pipeline.html) to identify copy number variations (CNVs) in the Kenyan Retinoblastoma targeted RB1 gene sequencing, including the necessary code at each step. CNVkit is optimized for targeted sequencing panels, exomes, and WGS  
 
 #### Step 0: Setup and Installation
@@ -27,7 +30,7 @@ conda activate cnvkit-env
 
 
 ####  Step 1: Prepare Inputs
-You'll need:
+What is needed:
 
 * Tumor BAM file (aligned, sorted, and indexed)
 * Target BED file (from your panel, includes RB1 coordinates)
@@ -35,41 +38,18 @@ You'll need:
 
 #### Step 2: Create a flat reference
 
-```
-cnvkit.py reference \
-    -t targets.bed \
-    -f reference.fasta \
-    -o flat_reference.cnn
-```
+Creating a flat reference provides a baseline for CNV analysis when no normal samples are available. It assumes uniform copy number across the genome, allowing CNVkit to normalize tumor coverage data despite lacking controls. This enables detection of large CNVs in tumor-only samples, though with less accuracy.
 
 #### Step 3: Run CNVkit on tumor sample
 
-```
-#!/bin/bash
+Running CNVkit coverage and correction on tumor samples calculates read depth across targeted regions, adjusts for biases (GC content, target size), and normalizes against the reference. This step transforms raw sequencing data into corrected copy number estimates essential for identifying CNVs in the tumor genome.
 
-# Define file paths
-TARGETS="../../annotations/RB1_exons_hg38_final_27_exons.bed"
-REFERENCE_FASTA="../../annotations/Homo_sapiens_assembly38.fasta"
-REFERENCE_CNN="../flat_reference_files/flat_reference.cnn"
-OUTPUT_DIR="cnvkit_output"
-BAM_DIR="/data/bam_files"
+#### Step 4: Visualize CNVs
 
-# Make output directory
-mkdir -p "$OUTPUT_DIR"
+Visualization helps interpret CNV data by showing copy number changes across the genome or specific regions. Plots like scatter plots or heatmaps reveal gains, losses, and patterns difficult to detect in raw data. Visualization validates findings and guides further biological or clinical analysis.
 
-# Loop through each BAM file and process with CNVkit batch
-for bam in "$BAM_DIR"/*.bam; do
-    sample=$(basename "$bam" .bam)
-    echo "Processing $sample"
+#### Step 5: Focusing on RB1 gene
 
-    cnvkit.py batch "$bam" \
-        -r "$REFERENCE_CNN" \
-        -t "$TARGETS" \
-        -f "$REFERENCE_FASTA" \
-        -d "$OUTPUT_DIR/$sample"
+Zooming in on the RB1 gene allows detailed assessment of its copy number status, critical for understanding tumor biology. Since RB1 alterations can drive cancer progression, focusing here helps detect deletions or amplifications specifically affecting this gene, informing research or therapeutic decisions.
 
-    echo "$sample done."
-done
 
-echo "All BAM files processed successfully."
-```
