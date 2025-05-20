@@ -48,11 +48,11 @@ cnvkit.py reference \
 #!/bin/bash
 
 # Define file paths
-TARGETS="/home/jgitau/annotations/RB1_exons_filtered.bed"
-REFERENCE_FASTA="/home/jgitau/annotations/Homo_sapiens_assembly38.fasta"
-REFERENCE_CNN="/home/jgitau/flat_reference_files/flat_reference.cnn"
+TARGETS="../../annotations/RB1_exons_hg38_final_27_exons.bed"
+REFERENCE_FASTA="../../annotations/Homo_sapiens_assembly38.fasta"
+REFERENCE_CNN="../flat_reference_files/flat_reference.cnn"
 OUTPUT_DIR="cnvkit_output"
-BAM_DIR="/home/jgitau/data"
+BAM_DIR="/data/bam_files"
 
 # Make output directory
 mkdir -p "$OUTPUT_DIR"
@@ -71,5 +71,5 @@ for bam in "$BAM_DIR"/*.bam; do
     echo "$sample done."
 done
 
-echo "All BAM files processed."
+echo "All BAM files processed successfully."
 ```
