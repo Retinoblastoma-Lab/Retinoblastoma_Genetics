@@ -15,7 +15,7 @@ This Repository has two parts:
 
 
 
-### Part 2: Copy Number Variation Analysis  
+##### Part 2: Copy Number Variation Analysis  
 
 For the Analysis scripts, kindly refer to the scripts directory   
 
