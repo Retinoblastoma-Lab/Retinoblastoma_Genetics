@@ -11,7 +11,27 @@ This Repository has two parts:
 
 ### Part 1: SNPS and Indels Analysis
 
-// ------ Work in Progress to update the page //
+#### Refer to the 'Scripts' directory above for the code corresponding to each step. Script names match the step names for easier navigation. These scripts were written following the GAT best practises and the analysis tutorial detailed [Here](https://www.melbournebioinformatics.org.au/tutorials/tutorials/variant_calling_gatk1/variant_calling_gatk1/)
+
+. Step 1 - Quality assessment of Fastq files using FastQC and MultiQC tools
+
+. Step 2 - 
+
+. Step 3 - 
+
+. Step 4 - 
+
+. Step 5 - 
+
+. Step 6 - 
+
+. Step 7 - 
+
+. Step 8 - 
+
+. Step 9 - 
+
+. Step 10 - 
 
 
 
