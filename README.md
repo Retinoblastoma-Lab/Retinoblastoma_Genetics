@@ -13,13 +13,23 @@ This Repository has two parts:
 
 // ------ Work in Progress to update the page //
 
+
+
 ### Part 2: Copy Number Variation Analysis  
 
 For the Analysis scripts, kindly refer to the scripts directory   
 
-This a step-by-step guide for using [CNVkit](https://cnvkit.readthedocs.io/en/stable/pipeline.html) to identify copy number variations (CNVs) in the Kenyan Retinoblastoma targeted RB1 gene sequencing, including the necessary code at each step. CNVkit is optimized for targeted sequencing panels, exomes, and WGS  
+### Load Required Library, and specify the genome to use
 
-#### Step 0: Setup and Installation
+```
+library(BSgenome.Hsapiens.UCSC.hg38)
+genome <- BSgenome.Hsapiens.UCSC.hg38
+```
+
+
+This a step-by-step guide for using [CNVkit](https://cnvkit.readthedocs.io/en/stable/pipeline.html) to identify copy number variations (CNVs) in the Kenyan Retinoblastoma targeted RB1 gene sequencing, including the necessary code at each step.
+
+#### Step 1: Setup and Installation
 Create a Conda Environment specific for this analysis and install CNVkit  
 **Note**: Make sure you have a working Python environment (Python ≥ 3.6). Then install CNVkit:   
 
