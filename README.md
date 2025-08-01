@@ -15,16 +15,36 @@ This Repository has two parts:
 
 
 
-##### Part 2: Copy Number Variation Analysis  
+#### Part 2: Copy Number Variation Analysis  
 
 For the Analysis scripts, kindly refer to the scripts directory   
 
-### Load Required Library, and specify the genome to use
+#### Load Required Library, and specify the genome to use
 
 ```
 library(BSgenome.Hsapiens.UCSC.hg38)
 genome <- BSgenome.Hsapiens.UCSC.hg38
 ```
+
+
+#### Define Paths - Adjust the file paths accordingly
+
+```
+bedFile <- "../../Retinoblastoma_final_analyses/copy_number_variation/bed_file/RB1_exons_hg38_final_27_exons.bed"
+bamdir <- "../../Retinoblastoma_final_analyses/copy_number_variation/bam_files"
+```
+
+### List BAM Files and Sample Names
+
+```
+bamFile <- list.files(bamdir, pattern = '\\.bam$', full.names = FALSE)
+bamPaths <- file.path(bamdir, bamFile)
+sampname <- tools::file_path_sans_ext(bamFile)
+```
+
+
+
+
 
 
 This a step-by-step guide for using [CNVkit](https://cnvkit.readthedocs.io/en/stable/pipeline.html) to identify copy number variations (CNVs) in the Kenyan Retinoblastoma targeted RB1 gene sequencing, including the necessary code at each step.
